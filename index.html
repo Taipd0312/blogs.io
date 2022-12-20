@@ -384,18 +384,12 @@
   gtag('config', 'G-LLWL5N9CSM');
   </script>
   <script>
-    document.addEventListener('load', musicPlay);
+    document.addEventListener('click', musicPlay);
     function musicPlay() {
         document.getElementById('myVid').play();
-        document.removeEventListener('load', musicPlay);
+        document.removeEventListener('click', musicPlay);
     }
   </script>
-  <script>
-    var vid = document.getElementById("myVid");
-    vid.onloadstart = function() {
-      vid.play();
-    };
-  </script> 
 </BODY>
 
 </HTML>
