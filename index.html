@@ -114,6 +114,7 @@
       <!-- Example add video  -->
       <video id="myVid" controls="true" autoplay="true" loop="true">
         <source id="myVid" src="./Music.mp4" type="video/mp4">
+        <iframe src="./Music.mp4" allow="autoplay" id="audio" style="display: none"></iframe>
       </video>
       <!-- Text at center of ground -->
       <p>
@@ -383,16 +384,18 @@
   gtag('config', 'G-LLWL5N9CSM');
   </script>
   <script>
-    var vid = document.getElementById("myVid").play(); 
-
-function playVid() { 
-  vid.play(); 
-} 
-
-function pauseVid() { 
-  vid.pause(); 
-} 
-</script>
+    document.addEventListener('load', musicPlay);
+    function musicPlay() {
+        document.getElementById('myVid').play();
+        document.removeEventListener('load', musicPlay);
+    }
+  </script>
+  <script>
+    var vid = document.getElementById("myVid");
+    vid.onloadstart = function() {
+      vid.play();
+    };
+  </script> 
 </BODY>
 
 </HTML>
