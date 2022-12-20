@@ -8,7 +8,7 @@
   <META NAME="Keywords" CONTENT="">
   <META NAME="Description" CONTENT="">
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-
+  <link rel="stylesheet" href="./style.css" />
 
   <style>
     html,
@@ -17,14 +17,14 @@
       padding: 0;
       margin: 0;
       background: #000;
-      background-image: url("https://scontent.fsgn5-2.fna.fbcdn.net/v/t39.30808-6/305408060_3337376683186335_45044870745541829_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ujJ4AlMUOAwAX9Un0B9&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfCe85vAxclxjtR-h7GS5cvyf9jxd1V72fc4mJGuULgEMA&oe=636FDC3E");
+      /* background-image: url("https://scontent.fsgn5-2.fna.fbcdn.net/v/t39.30808-6/305408060_3337376683186335_45044870745541829_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ujJ4AlMUOAwAX9Un0B9&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfCe85vAxclxjtR-h7GS5cvyf9jxd1V72fc4mJGuULgEMA&oe=636FDC3E");
       background-repeat: no-repeat;
       background-size: cover;
       background-position-x: 25%;
       background-position-y: 25%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center; */
 
     }
 
@@ -98,9 +98,30 @@
 </HEAD>
 
 <BODY>
-  <div class="box">
-    <canvas id="pinkboard"></canvas>
-    <a style="color: #FF5CA4; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 25px; font-style: italic;">Huỳnh</a>
+  <div id="drag-container">
+    <div id="spin-container">
+      <!-- Add your images (or video) here -->
+      <img src="./316855565_619616723273940_1815174187087628369_n.jpg" alt="">
+      <img src="./IMG_3037.JPG" alt="">
+      <img src="./IMG_3039.JPG" alt="">
+      <img src="./IMG_3040.JPG" alt="">
+      <img src="./IMG_3041.JPG" alt="">
+      <img src="./IMG_1717.jpg" alt="">
+      <!-- Example image with link -->
+      <a target="_blank" href="https://scontent.fsgn5-2.fna.fbcdn.net/v/t39.30808-6/305408060_3337376683186335_45044870745541829_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=k6x19ONXYFIAX8zbQHT&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfBsIOJ3w1yBwd73tDjtPpKqHopuWtnksyzJMDtnGQStLQ&oe=63A73B3E">
+        <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t39.30808-6/305408060_3337376683186335_45044870745541829_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=k6x19ONXYFIAX8zbQHT&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfBsIOJ3w1yBwd73tDjtPpKqHopuWtnksyzJMDtnGQStLQ&oe=63A73B3E" alt="">
+      </a>
+      <!-- Example add video  -->
+      <video id="myVid" controls="true" autoplay="true" loop="true">
+        <source id="myVid" src="./Music.mp4" type="video/mp4">
+      </video>
+      <!-- Text at center of ground -->
+      <p>
+        <canvas id="pinkboard"></canvas>
+        <a style="color: #FF5CA4; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 25px; font-style: italic;">Huỳnh</a>
+      </p>
+    </div>
+    <div id="ground"></div>
   </div>
   <script>
     /*
@@ -335,6 +356,43 @@
       }, 10);
     })(document.getElementById('pinkboard'));
   </script>
+
+  <script type="text/javascript" language="javascript">
+    window.snowStormConfigs = {
+        'snowColor': '#fff' //Thay đổi màu sắc của bông tuyết tại đây
+            ,
+        'snowCharacter': '&bull;' //Thay đổi hình dạng của bông tuyết tại đây
+    }
+    setTimeout(function () {
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "http://static.pep.vn/library/pepvn/blog-xtraffic/effects/snow-effect/main.min.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'blog-xtraffic-snow-effect'));
+    }, 200);
+  </script>
+  <script src="./script.js"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script> -->
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LLWL5N9CSM');
+  </script>
+  <script>
+    var vid = document.getElementById("myVid").play(); 
+
+function playVid() { 
+  vid.play(); 
+} 
+
+function pauseVid() { 
+  vid.pause(); 
+} 
+</script>
 </BODY>
 
 </HTML>
